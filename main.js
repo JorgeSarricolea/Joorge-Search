@@ -70,7 +70,7 @@ $(document).ready(function() {
 
             switch (selectData) {
                 case "ChatGPT with Python":
-                    webLink = `https://jorgesarricolea.com`;
+                    webLink = `https://github.com/JorgeSarricolea/ChatGPT-Python`;
                     linkTag.attr("href", webLink);
                     linkTag.get(0).click();
                     break;
