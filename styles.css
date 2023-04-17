@@ -9,3 +9,143 @@
 body {
     background-color: #fff;
 }
+
+:root {
+    --h1_titles: 58px;
+    --h1_subtitles: 42px;
+    --h2_titles: 36px;
+    --h2_subtitles: 24px;
+    --h3_biggerBody: 18px;
+    --h3_normalBody: 16px;
+    --h3_smallerBody: 12px;
+
+    --generalPadding: 30px;
+    --generalGap: 20px;
+
+    --buttonsRadius: 10px;
+    --containerRadius: 25px;
+}
+
+/* Main Content
+---------------------*/
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#main-container .search-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 10px;
+    gap: var(--generalGap);
+}
+
+#main-container .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #f1f3f4;
+    gap: var(--generalGap);
+    padding: 20px;
+    border-radius: var(--containerRadius);
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.search-inp {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+::placeholder {
+    opacity: .5;
+}
+
+/* Suggestions
+---------------------*/
+
+.autocom-box {
+    padding-top: 10px;
+    width: 100%;
+    display: none;
+}
+
+.active {
+    border-top: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    height: fit-content;
+}
+
+.autocom-box li {
+    list-style: none;
+    padding: 8px 12px;
+    width: 100%;
+    cursor: default;
+    border-radius: 5px;
+}
+
+li{
+    display: flex;
+}
+
+.autocom-box li:hover{
+    background: #ccc;
+}
+
+/* Joorge Colors
+---------------------*/
+
+.search-container p {
+    font-size: 100px;
+    letter-spacing: -12px;
+}
+
+.j {
+    color: #4c91f6;
+}
+
+.o1 {
+    color: #ea4335;
+}
+
+.o2 {
+    color: #fbbc05;
+}
+
+.r {
+    color: #4c91f6;
+}
+
+.g {
+    color: #34a853;
+}
+
+.e {
+    color: #ea4335;
+}
+
+.credits h3 {
+    text-align: center;
+    font-size: var(--h3_smallerBody);
+    font-weight: lighter;
+}
+
+.credits span {
+    font-weight: bold;
+}
