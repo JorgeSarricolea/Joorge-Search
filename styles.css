@@ -100,12 +100,17 @@ body {
     border-radius: 5px;
 }
 
+.autocom-box li:hover{
+    background: #ccc;
+}
+
 li{
     display: flex;
 }
 
-.autocom-box li:hover{
-    background: #ccc;
+i:hover {
+    color: #4c91f6;
+    cursor: pointer;
 }
 
 /* Joorge Colors
@@ -148,4 +153,18 @@ li{
 
 .credits span {
     font-weight: bold;
+}
+
+/* Responsive
+----------------*/
+
+@media only screen and (max-width: 768px) {
+    #main-container .search-container {
+        width: 80%;
+    }
+
+    .search-container p {
+        font-size: 80px;
+        letter-spacing: -10px;
+    }
 }

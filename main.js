@@ -11,9 +11,27 @@ $(document).ready(function() {
     let suggestions = [
         "ChatGPT with Python",
         "Calorie Calculator",
-        "Recipies NET",
-        "Spotify UI Clon",
-        "Weather APP"
+        "Spotify",
+        "Weather",
+        "Breaking News",
+        "Cooking Recipes",
+        "How to lose weight",
+        "How to learn a new language",
+        "Nearby Tourist Places",
+        "How to repair something at home",
+        "Tips for improving mental health",
+        "Job Offers",
+        "How to improve productivity",
+        "Tips for saving money",
+        "How to buy something online",
+        "Meaning of a word",
+        "Movie schedules",
+        "How to do crafts",
+        "How to prepare for an exam",
+        "Tips for improving memory",
+        "How to start a business",
+        "Best phone apps",
+        "Tips for quitting smoking"
     ];
 
     /* User Search Functions
@@ -44,10 +62,12 @@ $(document).ready(function() {
     function select(element) {
         let selectData = $(element).text();
         inputBox.val(selectData);
+        console.log(selectData);
         icon.click(function() {
 
             /* Switch On My Projects
             ---------------------*/
+
             switch (selectData) {
                 case "ChatGPT with Python":
                     webLink = `https://jorgesarricolea.com`;
@@ -61,19 +81,19 @@ $(document).ready(function() {
                     linkTag.get(0).click();
                     break;
 
-                case "Recipies NET":
+                case "Cooking Recipes":
                     webLink = `https://jorgesarricolea.com/recipies-net`;
                     linkTag.attr("href", webLink);
                     linkTag.get(0).click();
                     break;
 
-                case "Spotify UI Clon":
+                case "Spotify":
                     webLink = `https://jorgesarricolea.com/spotify-ui-clon`;
                     linkTag.attr("href", webLink);
                     linkTag.get(0).click();
                     break;
 
-                case "Weather APP":
+                case "Weather":
                     webLink = `https://jorgesarricolea.com/weather-app`;
                     linkTag.attr("href", webLink);
                     linkTag.get(0).click();
@@ -84,8 +104,10 @@ $(document).ready(function() {
                     linkTag.attr("href", webLink);
                     linkTag.get(0).click();
             }
-
+        // Reload the main page to new search input
+        location.reload();
         });
+        $(".autocom-box").removeClass("active");
     }
 
     /* List Data Function
