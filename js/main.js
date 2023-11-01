@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     const inputBox = $("input");
     const icon = $(".icon");
@@ -9,7 +9,6 @@ $(document).ready(function() {
     ---------------------*/
 
     let suggestions = [
-        "ChatGPT with Python",
         "Calorie Calculator",
         "Spotify",
         "Weather",
@@ -37,15 +36,15 @@ $(document).ready(function() {
     /* User Search Functions
     ---------------------*/
 
-    inputBox.on("keyup", function(e) {
+    inputBox.on("keyup", function (e) {
         let userData = e.target.value;
         let emptyArray = [];
         if (userData) {
-            emptyArray = suggestions.filter(function(data) {
+            emptyArray = suggestions.filter(function (data) {
                 // The suggestions will appear according to the first letter that the user enters
                 return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
             });
-            emptyArray = emptyArray.map((data)=>{
+            emptyArray = emptyArray.map((data) => {
                 // Passing return data inside li tag
                 return data = `<li>${data}</li>`;
             });
@@ -63,18 +62,12 @@ $(document).ready(function() {
         let selectData = $(element).text();
         inputBox.val(selectData);
         console.log(selectData);
-        icon.click(function() {
+        icon.click(function () {
 
             /* Switch On My Projects
             ---------------------*/
 
             switch (selectData) {
-                case "ChatGPT with Python":
-                    webLink = `https://github.com/JorgeSarricolea/ChatGPT-Python`;
-                    linkTag.attr("href", webLink);
-                    linkTag.get(0).click();
-                    break;
-
                 case "Calorie Calculator":
                     webLink = `https://jorgesarricolea.com/calorie-calculator`;
                     linkTag.attr("href", webLink);
@@ -104,8 +97,8 @@ $(document).ready(function() {
                     linkTag.attr("href", webLink);
                     linkTag.get(0).click();
             }
-        // Reload the main page to new search input
-        location.reload();
+            // Reload the main page to new search input
+            location.reload();
         });
         $(".autocom-box").removeClass("active");
     }
@@ -124,8 +117,8 @@ $(document).ready(function() {
         $(".autocom-box").html(listData);
 
         // Onclick function in listData
-        $(".autocom-box li").each(function() {
-            $(this).click(function() {
+        $(".autocom-box li").each(function () {
+            $(this).click(function () {
                 select(this);
             });
         });
